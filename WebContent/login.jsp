@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +12,10 @@
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
 
 <link rel="stylesheet" type="text/css"
-	href="../../assets/skin/default_skin/css/theme.css">
+	href="assets/skin/default_skin/css/theme.css">
 
 <link rel="stylesheet" type="text/css"
-	href="../../assets/admin-tools/admin-forms/css/admin-forms.css">
+	href="assets/admin-tools/admin-forms/css/admin-forms.css">
 </head>
 <body class="external-page sb-l-c sb-r-c">
 
@@ -47,7 +50,20 @@
 
 						<form method="post" action="login" id="contact" autocomplete="off">
 							<div class="panel-body bg-light p30">
-
+								<%
+									if (session.getAttribute("smsg") != null) {
+								%>
+								<div id="fadeOutFun"
+									class="alert alert-micro alert-border-left alert-danger alert-dismissable">
+									<button type="button" class="close" data-dismiss="alert"
+										aria-hidden="true">×</button>
+									<i class="fa fa-check pr10"></i> <strong><%=session.getAttribute("smsg")%>
+									</strong>
+								</div>
+								<%
+									session.removeAttribute("smsg");
+									}
+								%>
 								<div class="row">
 									<div class="col-sm-7 pr30">
 										<div class="section">
@@ -113,28 +129,27 @@
 
 
 
-	<script src="../../vendor/jquery/jquery-3.1.1.min.js"></script>
-	<script
-		src="../../vendor/jquery/jquery_migrate/jquery-migrate-3.0.0.min.js"></script>
-	<script src="../../vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+	<script src="vendor/jquery/jquery-3.1.1.min.js"></script>
+	<script src="vendor/jquery/jquery_migrate/jquery-migrate-3.0.0.min.js"></script>
+	<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
-	<script src="../../vendor/plugins/canvasbg/canvasbg.js"></script>
+	<script src="vendor/plugins/canvasbg/canvasbg.js"></script>
 
-	<script src="../../assets/js/utility/utility.js"></script>
-	<script src="../../assets/js/demo/demo.js"></script>
-	<script src="../../assets/js/main.js"></script>
+	<script src="assets/js/utility/utility.js"></script>
+	<script src="assets/js/demo/demo.js"></script>
+	<script src="assets/js/main.js"></script>
 
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
-	
+
 			"use strict";
-	
+
 			// Init Theme Core      
 			Core.init();
-	
+
 			// Init Demo JS
 			Demo.init();
-	
+
 			// Init CanvasBG and pass target starting location
 			CanvasBG.init({
 				Loc : {
@@ -142,18 +157,19 @@
 					y : window.innerHeight / 3.3
 				},
 			});
-	
+
 		});
 	</script>
 
 	<script>
 		$(document).ready(function() {
-	
+
 			$('#fadeOutFun').fadeOut(3500, 'swing', function() {
 				//callback function after animation finished
 				$("#fadeOutFun").attr('value', 'fadeOut() is now Complete');
 			});
 		});
 	</script>
+
 </body>
 </html>
