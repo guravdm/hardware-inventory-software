@@ -16,6 +16,7 @@
 
 <link rel="stylesheet" type="text/css"
 	href="assets/admin-tools/admin-forms/css/admin-forms.css">
+<script type="text/javascript" src=""></script>
 </head>
 <body class="external-page sb-l-c sb-r-c">
 
@@ -141,15 +142,15 @@
 
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
-
+	
 			"use strict";
-
+	
 			// Init Theme Core      
 			Core.init();
-
+	
 			// Init Demo JS
 			Demo.init();
-
+	
 			// Init CanvasBG and pass target starting location
 			CanvasBG.init({
 				Loc : {
@@ -157,13 +158,13 @@
 					y : window.innerHeight / 3.3
 				},
 			});
-
+	
 		});
 	</script>
 
 	<script>
 		$(document).ready(function() {
-
+	
 			$('#fadeOutFun').fadeOut(3500, 'swing', function() {
 				//callback function after animation finished
 				$("#fadeOutFun").attr('value', 'fadeOut() is now Complete');
