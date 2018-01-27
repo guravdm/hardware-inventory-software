@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +11,20 @@
 <link rel='stylesheet' type='text/css'
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
 
+<link href="<c:url value="/assets/skin/default_skin/css/theme.css" />"
+	rel="stylesheet">
+<link
+	href="<c:url value="/assets/admin-tools/admin-forms/css/admin-forms.css" />"
+	rel="stylesheet">
+
+
+<!-- 
 <link rel="stylesheet" type="text/css"
 	href="assets/skin/default_skin/css/theme.css">
 
 <link rel="stylesheet" type="text/css"
 	href="assets/admin-tools/admin-forms/css/admin-forms.css">
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src=""></script> -->
 </head>
 <body class="external-page sb-l-c sb-r-c">
 
