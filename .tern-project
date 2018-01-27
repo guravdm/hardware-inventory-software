@@ -2,11 +2,36 @@
   "plugins": {
     "guess-types": {
       
+    },
+    "gas": {
+      
+    },
+    "browser-extension": {
+      
+    },
+    "gcharts": {
+      
+    },
+    "gmaps3.ref": {
+      
+    },
+    "angular1": {
+      
+    },
+    "bootstrap": {
+      
+    },
+    "jquery-ui1-12": {
+      
+    },
+    "jquery-extension": {
+      
     }
   },
   "libs": [
     "ecma5",
     "browser",
     "jquery"
-  ]
+  ],
+  "ecmaVersion": 6
 }
