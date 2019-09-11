@@ -6,7 +6,7 @@
 <head>
 
 <meta charset="utf-8">
-<title>Login</title>
+<title>Login Page</title>
 
 <link rel='stylesheet' type='text/css'
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
